@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Werewolf GM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    *{box-sizing:border-box;}
+
+    body{
+      background:#111;
+      color:white;
+      font-family:Arial;
+      padding:20px;
+      margin:0;
+    }
+
+    input,select,button{
+      width:100%;
+      padding:14px;
+      border:none;
+      border-radius:12px;
+      margin-bottom:12px;
+      font-size:16px;
+    }
+
+    input,select{background:#1e1e1e;color:white;}
+    button{background:#5865f2;color:white;font-weight:bold;}
+
+    .box{background:#1a1a1a;padding:15px;border-radius:16px;}
+  </style>
+</head>
+
+<body>
+
+<h1>🎮 GM PANEL</h1>
+
+<div class="box">
+
+  <input id="roomCode" placeholder="รหัสห้อง">
+
+  <select id="deckSelect"></select>
+
+  <select id="roleSelect"></select>
+
+  <button onclick="addRole()">เพิ่มอาชีพ</button>
+
+</div>
+
+<div id="roleContainer"></div>
+
+<h2>รวมผู้เล่น: <span id="totalPlayers">0</span></h2>
+
+<button onclick="createRoom()">สร้างห้อง</button>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="cr-game.js"></script>
+<script src="cr-net.js"></script>
+
+</body>
+</html>
