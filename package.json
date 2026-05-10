@@ -1,6 +1,6 @@
 {
-  "name": "werewolf-game2",
-  "version": "1.0.1",
+  "name": "werewolf-game",
+  "version": "1.0.0",
   "description": "Online Werewolf Game",
   "main": "server.js",
   "scripts": {
