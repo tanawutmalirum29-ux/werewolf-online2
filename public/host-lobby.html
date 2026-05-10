@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Werewolf Lobby</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body{margin:0;padding:20px;background:#111;color:white;font-family:Arial;}
+    .box{background:#1a1a1a;padding:20px;border-radius:18px;margin-bottom:20px;}
+    .player{background:#1e1e1e;padding:15px;border-radius:14px;margin-bottom:10px;}
+    button{width:100%;padding:14px;border:none;border-radius:14px;background:#5865f2;color:white;font-weight:bold;margin-top:10px;}
+    .danger{background:#ed4245;}
+  </style>
+</head>
+
+<body>
+
+<h1>🎮 GAME LOBBY</h1>
+
+<div class="box">
+  <div>รหัสห้อง</div>
+  <h2 id="roomCode"></h2>
+  <div>ผู้เล่น: <span id="playerCount">0</span></div>
+</div>
+
+<div id="playerList"></div>
+
+<button onclick="uiStartGame()">เริ่มเกม</button>
+<button class="danger" onclick="uiCloseRoom()">ยุบห้อง</button>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="lobby-ui.js"></script>
+<script src="lobby-net.js"></script>
+
+</body>
+</html>
