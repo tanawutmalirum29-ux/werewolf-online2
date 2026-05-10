@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GM Game Panel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body{margin:0;padding:20px;background:#111;color:white;font-family:Arial;}
+    .box{background:#1a1a1a;padding:20px;border-radius:16px;margin-bottom:15px;}
+    .player{background:#1e1e1e;padding:15px;border-radius:14px;margin-bottom:10px;}
+    button{padding:10px;border-radius:10px;border:none;margin:3px;}
+  </style>
+</head>
+
+<body>
+
+<h1>🎮 GM GAME</h1>
+
+<div class="box">
+  ห้อง: <span id="roomCode"></span>
+  <br>
+  ผู้เล่น: <span id="stats"></span>
+</div>
+
+<button onclick="uiSetPhase('กลางวัน')">☀️ กลางวัน</button>
+<button onclick="uiSetPhase('กลางคืน')">🌙 กลางคืน</button>
+
+<div id="players"></div>
+
+<div class="box">
+  <h3>Logs</h3>
+  <div id="logs"></div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="gm-engine.js"></script>
+<script src="gm-ui.js"></script>
+<script src="gm-net.js"></script>
+
+</body>
+</html>
