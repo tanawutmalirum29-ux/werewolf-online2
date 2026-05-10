@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Werewolf Player</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body{margin:0;padding:20px;background:#111;color:white;font-family:Arial;}
+    .box{background:#1a1a1a;padding:20px;border-radius:16px;margin-bottom:15px;}
+    button,select,input{width:100%;padding:14px;border-radius:12px;border:none;margin-top:10px;}
+    button{background:#5865f2;color:white;font-weight:bold;}
+    .hidden{display:none;}
+  </style>
+</head>
+
+<body>
+
+<!-- JOIN -->
+<div id="joinPage" class="box">
+  <h2>Join Game</h2>
+  <input id="name" placeholder="ชื่อ">
+  <input id="roomCode" placeholder="รหัสห้อง">
+  <button onclick="uiJoin()">เข้าเกม</button>
+</div>
+
+<!-- LOBBY -->
+<div id="lobbyPage" class="box hidden">
+  <h2>Lobby</h2>
+  <div id="roomText"></div>
+  <div id="playerList"></div>
+</div>
+
+<!-- GAME -->
+<div id="gamePage" class="box hidden">
+
+  <h2>Role</h2>
+  <div id="myRole"></div>
+  <div id="status"></div>
+  <div id="roleDesc"></div>
+
+  <div id="actionArea"></div>
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="player-game.js"></script>
+<script src="player-ui.js"></script>
+<script src="player-net.js"></script>
+
+</body>
+</html>
